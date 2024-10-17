@@ -1,0 +1,88 @@
+TASK NUMBER 01
+
+CODE:
+Public class Movie {
+Private String name;
+Private String type;
+    Private String producer;
+    private int releaseYear;
+    public String getName() {
+        return name;
+    }
+    public void setName(String name) {
+        this.name = name;
+    }
+    public String getType() {
+        return type;
+    }
+    public void setType(String type) {
+        this.type = type;
+    }
+    public String getProducer() {
+        return producer;
+    }
+    public void setProducer(String producer) {
+        this.producer = producer;
+    }
+    public int getReleaseYear() {
+        return releaseYear;
+    }
+    public void setReleaseYear(int releaseYear) {
+        this.releaseYear = releaseYear;
+    }
+    public static void main(String[] args) {
+       Movie myMovie = new Movie();
+        myMovie.setName("3 Idiots");
+        myMovie.setType("Comedy");
+        myMovie.setProducer("Amir Khan");
+        myMovie.setReleaseYear(2014);
+        System.out.println("Movie Name: " + myMovie.getName());
+        System.out.println("Movie Type : " + myMovie.getType());
+        System.out.println("Producer : " + myMovie.getProducer());
+        System.out.println("Release Year: " + myMovie.getReleaseYear());
+    }
+}
+OUTPUT:
+ 
+TASK NO 02
+
+CODE:
+public class Appliance {
+    private String brand;
+    private int model;
+    private int powerConsumption;
+    public Appliance(String brand, int model, int powerConsumption) {
+        this.brand = brand;
+        this.model = model;
+        this.powerConsumption = powerConsumption;
+    }
+    public String getBrand() {
+        return brand;
+    }
+    public int getModel() {
+        return model;
+    }
+    public int getPowerConsumption() {
+        return powerConsumption;
+    }
+}
+  public class Refrigerator extends Appliance {
+    private int capacity;
+    public Refrigerator(String brand, int model, int powerConsumption, int capacity){
+        super(brand, model, powerConsumption); 
+        this.capacity = capacity;
+    }
+    public int getCapacity() {
+        return capacity;
+    }
+    public void setCapacity(int capacity) {
+        this.capacity = capacity;
+    }
+    public static void main(String[] args) {  
+        Refrigerator myFridge = new Refrigerator("Dawlance", 9173, 500, 30);
+        System.out.println("Brand: " + myFridge.getBrand());
+        System.out.println("Model: " + myFridge.getModel());
+        System.out.println("Power Consumption: " + myFridge.getPowerConsumption() + " W");
+        System.out.println("Capacity: " + myFridge.getCapacity() + " cu ft");
+    }
+}
