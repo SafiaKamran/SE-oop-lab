@@ -1,0 +1,102 @@
+
+public class Player {
+    String playerName;
+    String playerPosition;
+    Player(String playerName, String Playerposition){
+        this.playerName = playerName;
+        this.playerPosition = Playerposition;
+    }
+    void displayinfo(){
+        System.out.println("player 1"+playerName);
+        System.out.println("palyer 2"+playerPosition);
+}
+}
+   
+   class Team{
+    String teamName;
+    Player players1;
+    Player players2;
+    Team(String teamName, Player playerstype1, Player playerstype2){
+        this.teamName = teamName;
+        this.players1 = playerstype1;
+        this.players2 = playerstype2;
+    }
+    
+    public static void main(String[]args){
+        Player p1 = new Player("Eman", "Forward");
+        Player p2 = new Player("Vanniya", "Defender");
+        Team t1 = new Team("Eman", p1,p2);
+        p1.displayinfo();
+        p2.displayinfo();
+    }
+   }
+ 
+
+                                                                                                                                       
+                                      
+Task#02
+
+class CPU {
+    private String brand;
+    private double speed; 
+
+    public CPU(String brand, double speed) {
+        this.brand = brand;
+        this.speed = speed;
+    }
+
+    public String getDetails() {
+        return "CPU Brand: " + brand + ", Speed: " + speed + " GHz";
+    }
+}
+
+class RAM {
+    private String brand;
+    private int capacity; 
+
+    public RAM(String brand, int capacity) {
+        this.brand = brand;
+        this.capacity = capacity;
+    }
+
+    public String getDetails() {
+        return "RAM Brand: " + brand + ", Capacity: " + capacity + " GB";
+    }
+}
+
+class HardDrive {
+    private String brand;
+    private int capacity;
+
+    public HardDrive(String brand, int capacity) {
+        this.brand = brand;
+        this.capacity = capacity;
+    }
+
+    public String getDetails() {
+        return "Hard Drive Brand: " + brand + ", Capacity: " + capacity + " GB";
+    }
+}
+class Computer {
+    private CPU cpu;
+    private RAM ram;
+    private HardDrive hardDrive;
+
+    public Computer(String cpuBrand, double cpuSpeed, String ramBrand, int ramCapacity, String hdBrand, int hdCapacity) {
+        this.cpu = new CPU(cpuBrand, cpuSpeed);
+        this.ram = new RAM(ramBrand, ramCapacity);
+        this.hardDrive = new HardDrive(hdBrand, hdCapacity);
+    }
+
+    public void displayDetails() {
+        System.out.println(cpu.getDetails());
+        System.out.println(ram.getDetails());
+        System.out.println(hardDrive.getDetails());
+    }
+    public static void main(String[] args) {
+        Computer computer = new Computer("Intel", 3.5, "Corsair", 16, "Seagate", 1024);
+        computer.displayDetails();
+
+        computer = null;
+}
+}
